@@ -37,6 +37,10 @@ Setup your Things cloud account and [Mail to Things][thingsmail] add your email 
 
 By default, this app emails Assigned issues and Pull Requests you have been requested as reviewer. If you would like to turn them off, you can add `ASSIGNED` or `REVIEWS` [config variables][configv] with `false` value.
 
+## License
+
+[MIT](./LICENSE) &copy; [Jon Rohan](http://jonrohan.codes)
+
 [thingsmail]:https://support.culturedcode.com/customer/en/portal/articles/2908262-using-mail-to-things
 [mailgun]:https://documentation.mailgun.com/en/latest/quickstart-sending.html#how-to-start-sending-email
 [ghtoken]:https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
