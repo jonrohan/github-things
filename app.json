@@ -1,0 +1,47 @@
+{
+  "name": "GitHub + Things",
+  "description": "Sync GitHub assigned issues with Things inbox",
+  "keywords": [
+    "productivity",
+    "github",
+    "thingsapp",
+    "todo"
+  ],
+  "repository": "https://github.com/jonrohan/github-things",
+  "addons": [
+    "heroku-redis",
+    "scheduler"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "GH_TOKEN": {
+      "required": true,
+      "description": "GitHub API token",
+      "value": ""
+    },
+    "GH_USERNAME": {
+      "required": true,
+      "description": "Your GitHub username",
+      "value": ""
+    },
+    "THINGS_EMAIL": {
+      "required": true,
+      "description": "Your add to things email",
+      "value": ""
+    },
+    "MG_API": {
+      "required": true,
+      "description": "Mailgun api key",
+      "value": ""
+    },
+    "MG_DOMAIN": {
+      "required": true,
+      "description": "Your Mailgun email domain",
+      "value": ""
+    }
+  }
+}

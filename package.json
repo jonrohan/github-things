@@ -1,0 +1,16 @@
+{
+  "name": "github-things",
+  "version": "1.0.0",
+  "description": "Sync assigned issues in GitHub with Things.app",
+  "main": "index.js",
+  "author": "Jon Rohan",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^14.0.5",
+    "mailgun-js": "^0.14.1",
+    "redis": "^2.8.0"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
