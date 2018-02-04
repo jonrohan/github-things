@@ -82,9 +82,7 @@ const emailItem = (item, queryType) => {
                `\nOpened: ${(new Date(item.created_at)).toLocaleDateString("en-US", { "timeZone": "America/Los_Angeles" })}` +
                (item.labels.length > 0 ? `\nLabels: ${item.labels.map(l => { return `<${l.name}>`}).join(" ")}` : "")
 
-  debug(subject + "\n--\n" + body + "\n\n-------------------------------\n\n")
-
-  if(debug()) {
+  if (debug(subject + "\n--\n" + body + "\n\n-------------------------------\n\n")) {
     return Promise.resolve(`${item.id}`)
   }
 
