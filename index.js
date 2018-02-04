@@ -28,11 +28,27 @@ const redisKey = crypto.createHmac("sha256", process.env.GH_USERNAME)
                    .update("githubthings")
                    .digest("hex")
 
+const assignedType = () => {
+  switch (process.env.ASSIGNED_TYPE) {
+    case "issue":
+      return "is:issue"
+      break;
+    case "pull":
+      return "is:pull"
+      break;
+    case "both":
+      return ""
+      break;
+    default:
+      return "is:issue"
+  }
+}
+
 const queries = [
   // Assigned issues
   {
     "name": "Assigned",
-    "q": `is:open is:issue assignee:${process.env.GH_USERNAME} archived:false`,
+    "q": `is:open ${assignedType()} assignee:${process.env.GH_USERNAME} archived:false`,
     "enabled": (process.env.ASSIGNED || "true")
   },
 
